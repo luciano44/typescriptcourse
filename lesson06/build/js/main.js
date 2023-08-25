@@ -1,5 +1,6 @@
 "use strict";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Type Assertion / Type Casting
 // convert to more or less specific
 let a = "hello";
@@ -22,6 +23,8 @@ const nextImg = document.getElementById("img");
 img.src;
 myImg.src;
 =======
+=======
+>>>>>>> c6261681c478af1fde9b7d76f54bbbcd011fa10e
 class Coder {
     constructor(name, music, age, lang = "Typescript") {
         this.name = name;
@@ -105,4 +108,7 @@ console.log(myBands.data);
 myBands.data = [...myBands.data, "ZZ Top"];
 console.log(myBands.data);
 myBands.data = ["Van Halen", "5150"];
+<<<<<<< HEAD
+>>>>>>> c6261681c478af1fde9b7d76f54bbbcd011fa10e
+=======
 >>>>>>> c6261681c478af1fde9b7d76f54bbbcd011fa10e
