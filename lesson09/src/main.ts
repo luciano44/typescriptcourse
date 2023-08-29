@@ -79,3 +79,58 @@ const gradeData: Record<Students, Grades> = {
     asasign2: 15,
   },
 }
+
+// Pick and Omit
+
+type AssignResult = Pick<Assignment, "studentId" | "grade">
+
+const score: AssignResult = {
+  studentId: "k123",
+  grade: 85,
+}
+
+type AssignPreview = Omit<Assignment, "grade" | "verified">
+
+const preview: AssignPreview = {
+  studentId: "k321",
+  title: "The Final Project",
+}
+
+// Exclude and Extract
+// (string literals union type)
+
+type AdjustedGrade = Exclude<LetterGrades, "U">
+
+type HighGrades = Extract<LetterGrades, "A" | "B">
+
+// Non-Nullable
+
+type AllPossibleGrades = "Dave" | "John" | null | undefined
+
+type NamesOnly = NonNullable<AllPossibleGrades>
+
+// Return Type
+
+// type newAssign = {
+//   title: string
+//   points: number
+// }
+
+const createNewAssign = (title: string, points: number) => {
+  return { title, points }
+}
+
+type NewAssign = ReturnType<typeof createNewAssign>
+
+const tsAssign: NewAssign = createNewAssign("Utility types", 100)
+console.log(tsAssign)
+
+// Parameters
+
+type AssignParams = Parameters<typeof createNewAssign>
+
+const assignArgs: AssignParams = ["Generics", 100]
+
+const tsAssign2: NewAssign = createNewAssign(...assignArgs)
+
+console.log(tsAssign2)

@@ -45,3 +45,24 @@ const gradeData = {
         asasign2: 15,
     },
 };
+const score = {
+    studentId: "k123",
+    grade: 85,
+};
+const preview = {
+    studentId: "k321",
+    title: "The Final Project",
+};
+// Return Type
+// type newAssign = {
+//   title: string
+//   points: number
+// }
+const createNewAssign = (title, points) => {
+    return { title, points };
+};
+const tsAssign = createNewAssign("Utility types", 100);
+console.log(tsAssign);
+const assignArgs = ["Generics", 100];
+const tsAssign2 = createNewAssign(...assignArgs);
+console.log(tsAssign2);
