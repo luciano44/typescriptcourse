@@ -145,7 +145,7 @@ interface User {
 }
 
 const fetchUsers = async (): Promise<User[]> => {
-  const data = await fetch("https://jsonplaceholder.typicode.com/users/5")
+  const data = await fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
     .catch((err) => {
       if (err instanceof Error) console.log(err.message)
@@ -156,3 +156,12 @@ const fetchUsers = async (): Promise<User[]> => {
 type fetchUsersReturnType = Awaited<ReturnType<typeof fetchUsers>>
 
 fetchUsers().then((users) => console.log(users))
+
+// Partial - Turn all properties of a type not required.
+// Required - Turn all properties of a type required
+// Readonly - Keep same type but read-only, can't reasign
+// Record - Record<K,V> Define objects on which keys are of type K and values are of type V
+// Pick and Omit - Pick or Omit return or "Omit" properties of a type
+// Exclude and Extract - Exclude and Extract types of a String literals union type
+// ReturnType - Return the type of a function
+// Awaited - Helps us with the return type of a Promise

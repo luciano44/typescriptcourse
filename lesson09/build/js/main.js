@@ -76,7 +76,7 @@ const assignArgs = ["Generics", 100];
 const tsAssign2 = createNewAssign(...assignArgs);
 console.log(tsAssign2);
 const fetchUsers = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield fetch("https://jsonplaceholder.typicode.com/users/5")
+    const data = yield fetch("https://jsonplaceholder.typicode.com/users")
         .then((res) => res.json())
         .catch((err) => {
         if (err instanceof Error)
