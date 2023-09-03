@@ -1,5 +1,14 @@
+import Heading from "./components/Heading"
+import Section from "./components/Section"
+
 const App = () => {
-  return <h1>Hello World</h1>
+  return (
+    <>
+      <Heading title="hey buddy" />
+      <Section>Hello</Section>
+      <Section title="hey test">Hello</Section>
+    </>
+  )
 }
 
 export default App
