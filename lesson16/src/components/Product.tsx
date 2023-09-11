@@ -22,7 +22,7 @@ function Product({
   const onAddToCart = () =>
     dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } })
 
-  const itemInCart = inCart ? "-> item in Cart: ✔" : null
+  const itemInCart = inCart ? " -> Item in Cart: ✔" : null
 
   const content = (
     <article className="product">
