@@ -12,7 +12,7 @@ type PropsType = {
 }
 
 function CartLineItem({ item, dispatch, REDUCER_ACTIONS }: PropsType) {
-  const img: string = new URL(`../images/${item.sku}`, import.meta.url).href
+  const img: string = new URL(`../images/${item.sku}.jpg`, import.meta.url).href
 
   const lineTotal: number = item.qty * item.price
 
